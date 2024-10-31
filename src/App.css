@@ -1,38 +1,65 @@
-.App {
+.active{
+  background-color: blanchedalmond;
+}
+
+
+.body-container {
   text-align: center;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body-title {
+  font-size: 2.5em;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.body-description {
+  font-size: 1.2em;
+  color: #555;
+  margin: 20px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.animation-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-end;
+  height: 200px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.bouncing-ball {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-50px); /* Height of the bounce */
+  }
+  60% {
+    transform: translateY(-25px); /* Secondary bounce */
+  }
+}
+
+.explore-button {
+  padding: 10px 20px;
+  font-size: 1em;
   color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.explore-button:hover {
+  background-color: #0056b3;
 }
