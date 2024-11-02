@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png";
 
 export const Header = () => {
@@ -9,26 +10,22 @@ export const Header = () => {
       <nav className="flex-grow">
         <ul className="flex justify-center space-x-8">
           <li className="nav-item">
-            <a href="#home" className="text-white hover:text-lavender-300 transition duration-300 transform hover:scale-105">Home</a>
+            <Link to="/home" className="text-white hover:text-lavender-300 transition duration-300 transform hover:scale-105">Home</Link>
           </li>
           <li className="nav-item">
-            <a href="#about" className="text-white hover:text-lavender-300 transition duration-300 transform hover:scale-105">About</a>
+            <Link to="/about" className="text-white hover:text-lavender-300 transition duration-300 transform hover:scale-105">About</Link>
           </li>
           <li className="nav-item">
-            <a href="#services" className="text-white hover:text-lavender-300 transition duration-300 transform hover:scale-105">Services</a>
+            <Link to="/services" className="text-white hover:text-lavender-300 transition duration-300 transform hover:scale-105">Services</Link>
           </li>
           <li className="nav-item">
-            <a href="#contact" className="text-white hover:text-lavender-300 transition duration-300 transform hover:scale-105">Contact</a>
+            <Link to="/contact" className="text-white hover:text-lavender-300 transition duration-300 transform hover:scale-105">Contact</Link>
           </li>
         </ul>
       </nav>
       <div className="search-container">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="p-2 border border-lavender-600 rounded  text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-lavender-300"
-        />
+        < input type="search" placeholder="Search" className="w-full p-2 pl-10 text-sm text-gray-700" />
       </div>
     </div>
   );
-}
+};
