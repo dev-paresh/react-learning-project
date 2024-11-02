@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react';
+import { CommonHeaTittle } from './CommonHeaTittle';
 
 export const Service = () => {
+    const [title] = useState("Our Services");
+    const [body] = useState("This is the body of the services section.");
+
     return (
-        <div className="p-5 bg-lavender-400 text-black">
-          <h1 className="text-3xl font-bold">Our Services</h1>
-          <p>This is the body of the services section.</p>
-        </div>
+        <CommonHeaTittle  title={title} body={body} />
       );
 }
