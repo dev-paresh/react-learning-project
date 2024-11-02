@@ -1,65 +1,53 @@
-.active{
-  background-color: blanchedalmond;
-}
-
-
-.body-container {
-  text-align: center;
-  padding: 20px;
-  background-color: #f0f8ff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.body-title {
-  font-size: 2.5em;
-  color: #333;
-}
-
-.body-description {
-  font-size: 1.2em;
-  color: #555;
-  margin: 20px 0;
-}
-
-.animation-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 200px; /* Adjust height as needed */
-  overflow: hidden;
-}
-
-.bouncing-ball {
-  width: 50px;
-  height: 50px;
-  background-color: #007bff;
-  border-radius: 50%;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
   }
-  40% {
-    transform: translateY(-50px); /* Height of the bounce */
-  }
-  60% {
-    transform: translateY(-25px); /* Secondary bounce */
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
-.explore-button {
-  padding: 10px 20px;
-  font-size: 1em;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease forwards;
 }
 
-.explore-button:hover {
-  background-color: #0056b3;
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-50%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes buttonEntrance {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-buttonEntrance {
+  animation: buttonEntrance 0.5s ease forwards;
+  animation-delay: 0.5s; /* Slight delay for button entrance */
 }
